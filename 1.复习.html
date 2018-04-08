@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // node   : 是一个部署服务器上的一个工具；给js在服务端运行提供一个环境； 在浏览器端是window； 在服务器是global；
+
+    // 模块 ： js
+    // 内置模块 ： 安装node时进行内置安装；
+    // 自定义模块 ：自己封装的方法
+    // 第三方模块；npm中第三方提供的免费的开源模块；
+
+    // fs   url   http
+    // js
+    // 在A模块中对任意数字进行求和，在B模块中计算数字乘以20；
+    // 在C模块中进行计算，计算A模块中的和和20的积；把结果输出；
+   let fs = require('fs');
+   fs.readFile(path,options,callback(error,value));
+    // fs : 提供了一些读写数据的一些方法
+    // readFile : 异步读取  返回值是一个字符串
+    // readFileSync: 同步读取；把读取的内容放进函数值中；
+
+    // 覆盖式
+    //writeFile : 异步写数据  写入数据也是一个字符串；
+    // writeFileSync
+
+
+    // readdir :读取该文件下的目录；返回一个数组；
+    // readdirSync :
+
+//    const url = require('url');
+//    let  str ='https://www.zhufengpeixun.com:8080/stu/index.html?name=zf&age=9&course=JS#box';
+//    // url.parse
+//    console.log(url.parse(str, true).pathname);// true  : 把query这个属性值变成一个对象；
+
+
+    // http
+    let http = require('http');//这是一个对象 createServer: 创建一个服务；
+    let  server = http.createServer(function (request,response) {// 创建一个服务；
+        // 每当客户端请求一次，此处回调函数执行一次；
+        // request : 请求的所有信息
+        // response : 包含了所有的响应信息；
+    });
+    server.listen(8080,function () {
+        //当服务监听成功，立即执行这个函数，只执行一次；
+        // 服务被起，那么回调函数；
+    })
+    // 一个服务只能监听一个端口号；而且一个端口号不能被多个服务监听；
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

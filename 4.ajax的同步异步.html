@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 同步和异步
+    // js 属于单线程： 一次只能做一件事情；
+    // 同步： 必须当前任务执行完成才能继续执行下面的任务
+    // 异步：
+
+
+    // 同步的代码都会放到主任务队列
+    // 异步的编程需要放在等待任务队列中；等待任务必须等到所有的主任务队列的任务执行完成，才会开始执行等待队列中的任务；
+    // 当加载到16行时，记录一下时间，当到达预定时间时马上执行；
+    setTimeout(function () {
+        console.log(1);
+    },10);
+    var cur= new Date();
+    setTimeout(function () {
+        console.log(2)
+    },9)
+    // 在for循环上面的异步任务，看时间小的先执行；
+   for(var i=0;i<100000000;i++){  // 15毫秒
+
+   }
+
+   xhr.open("get","./index",true);// true : 异步  false： 同步
+//  <p   data-id="">
+    var  val = $(this).attr("data-id");
+    $.ajax({
+        url : "../index/word"+ round(),
+        type:"get",
+        async:true,
+        data : {
+            id: val
+        },
+        dataType:"json",
+        success:function (data) {
+            console.log(data);
+        }
+    })
+
+   // for 循环需要446毫秒执行完成
+//   console.log(new Date-cur);
+//   console.log(100);
+
+
+</script>
+</body>
+</html>
